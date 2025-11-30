@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Congratulations! | SLC Christmas Hunt</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    header {
+      padding: 2rem 1rem;
+      background: #e94560;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: slideDown 1.2s ease;
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-40px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    header h1 {
+      font-size: 2.7rem;
+      margin: 0;
+      text-shadow: 0 0 12px #ffd369;
+    }
+
+    .card {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      animation: fadeUp 1.5s ease;
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+      color: #ff7b91;
+      text-shadow: 0 0 8px #e94560;
+      border-bottom: 2px solid #ff7b91;
+      padding-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin: 1.2rem 0;
+    }
+
+    /* Avatar Style (same as homepage) */
+    #avatar {
+      width: 260px;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+
+      transition: 
+        transform 0.4s ease,
+        filter 0.4s ease,
+        box-shadow 0.4s ease;
+
+      box-shadow: 0 0 15px rgba(233,69,96,0.25);
+      animation: fadeUpAvatar 1.5s ease;
+    }
+
+    #avatar:hover {
+      transform: scale(1.12);
+      filter: drop-shadow(0 0 18px rgba(255,123,145,0.8));
+      box-shadow:
+        0 0 25px rgba(255,123,145,0.8),
+        0 4px 30px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeUpAvatar {
+      from {opacity: 0; transform: translateY(20px) scale(0.95);}
+      to {opacity: 1; transform: translateY(0) scale(1);}
+    }
+
+    /* Hint Button */
+    .hint-btn {
+      background: #ffd369;
+      color: #222;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      display: inline-block;
+      font-size: 1.3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+
+      box-shadow: 0 0 15px rgba(255,211,105,0.5);
+      transition: 0.3s;
+    }
+
+    .hint-btn:hover {
+      transform: scale(1.12);
+      background: #ffe9a6;
+      box-shadow: 0 0 25px rgba(255,211,105,0.9);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 3rem;
+      background: #0f3460;
+      border-top: 1px solid #222;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Snowfall */
+    .snowflake {
+      position: fixed;
+      top: 0;
+      z-index: 99999;
+      color: white;
+      font-size: 1em;
+      opacity: 0.8;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0.3; }
+    }
+
+    #snow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>🎉 Congratulations! 🎄</h1>
+</header>
+
+<div class="card">
+  <h2>You Completed the Christmas Treasure Hunt!</h2>
+
+  <p>You've solved every puzzle, found every clue, and made it to the very end.  
+  The CMS Christmas Treasure Hunt is officially <span class="highlight">COMPLETE</span> thanks to you! 🎁✨</p>
+
+  <p>But to officially claim your prize…  
+  You must complete the <span class="highlight">Final Act</span>.</p>
+
+  <img id="avatar" width="250" height="250" src="https://ares3r4.github.io/slc-treasure-hunt/avatar-poster.png" alt="Avatar" preload="auto" muted loop>
+    <source src="https://ares3r4.github.io/treasure-hunt-finale/avatar.png" type="img/png">
+  </video>
+
+  <p style="margin-top:1.5rem;font-size:1.25rem;">
+    🔍 <b>Find the person wearing a Santa hat</b> somewhere in the area.<br>
+    🎅 And when you find them, say the magic words:<br><br>
+    <span style="color:#ffd369;font-size:1.7rem;font-weight:600;">
+      “Mischief Managed.”
+    </span><br><br>
+    Only then will your prize be revealed…
+  </p>
+
+  <a class="hint-btn" id="hint" target="_blank">Need a Hint?</a>
+
+</div>
+
+<footer>
+  © 2025 CMS | Christmas Treasure Hunt
+</footer>
+
+<script>
+  /* Snow creation */
+  const snowContainer = document.createElement('div');
+  snowContainer.id = "snow-container";
+  document.body.appendChild(snowContainer);
+
+  function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+    snowflake.textContent = '❄';
+    snowflake.style.left = Math.random() * 100 + 'vw';
+    snowflake.style.animationDuration = 3 + Math.random() * 5 + 's';
+    snowflake.style.fontSize = 10 + Math.random() * 20 + 'px';
+    snowflake.style.opacity = Math.random();
+    snowContainer.appendChild(snowflake);
+    setTimeout(() => snowflake.remove(), 8000);
+  }
+
+  setInterval(createSnowflake, 200);
+
+  /* Avatar hover play (same as homepage) */
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("avatar");
+
+    video.addEventListener("touchstart", () => {
+      video.play().catch(()=>{});
+      video.pause();
+    }, { once: true });
+
+    video.addEventListener("mouseenter", () => {
+      const p = video.play();
+      if (p) p.catch(() => {});
+    });
+
+    video.addEventListener("mouseleave", () => {
+      try { video.pause(); } catch(e) {}
+      video.currentTime = 0;
+    });
+  });
+
+  /* Rickroll button */
+  document.getElementById("hint").addEventListener("click", () => {
+    window.location.href = "https://youtu.be/dQw4w9WgXcQ";
+  });
+</script>
+
+</body>
+</html>
