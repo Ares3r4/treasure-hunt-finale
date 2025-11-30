@@ -177,8 +177,8 @@
   <p>But to officially claim your prize…  
   You must complete the <span class="highlight">Final Act</span>.</p>
 
-  <img id="avatar" width="250" height="250" src="https://ares3r4.github.io/slc-treasure-hunt/Screenshot 2025-11-28 214617.png" alt="Avatar" preload="auto" muted loop>
-    <source src="https://ares3r4.github.io/treasure-hunt-finale/Screenshot 2025-11-28 214617.png" type="img/png">
+  <img id="avatar" width="250" height="250" src="https://ares3r4.github.io/slc-treasure-hunt/avatar-final.png" alt="Avatar" preload="auto" muted loop>
+    <source src="https://ares3r4.github.io/treasure-hunt-finale/avatar-final.png" type="img/png">
   </video>
 
   <p style="margin-top:1.5rem;font-size:1.25rem;">
@@ -218,26 +218,7 @@
 
   setInterval(createSnowflake, 200);
 
-  /* Avatar hover play (same as homepage) */
-  document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById("avatar");
-
-    video.addEventListener("touchstart", () => {
-      video.play().catch(()=>{});
-      video.pause();
-    }, { once: true });
-
-    video.addEventListener("mouseenter", () => {
-      const p = video.play();
-      if (p) p.catch(() => {});
-    });
-
-    video.addEventListener("mouseleave", () => {
-      try { video.pause(); } catch(e) {}
-      video.currentTime = 0;
-    });
-  });
-
+  
   /* Rickroll button */
   document.getElementById("hint").addEventListener("click", () => {
     window.location.href = "https://youtu.be/dQw4w9WgXcQ";
